@@ -22,7 +22,7 @@ class Board extends React.Component {
 
   	render() {
 	    return (
-	      	<div>
+	      	<div class="row align-items-center">
 	        	<div className="board-row">
 	          		{this.renderSquare(0)}
 	          		{this.renderSquare(1)}
@@ -88,10 +88,10 @@ class Game extends React.Component {
 		const moves = history.map((step, move) => {
 			const desc = move ?
 				'Go to move #' + move :
-				'Go to game start';
+				'Restart game';
 			return (
-				<li key={move}>
-					<button onClick={() => this.jumpTo(move)}>{desc}</button>
+				<li class="list" type="circle" key={move}>
+					<button class="jump" onClick={() => this.jumpTo(move)}>{desc}</button>
 				</li>
 			);
 		});
@@ -112,7 +112,7 @@ class Game extends React.Component {
 			    	/>
 			    </div>
 			    <div className="game-info">
-			      <div>{status}</div>
+			      <div class="status">{status}</div>
 			      <ol>{moves}</ol>
 			    </div>
 			</div>

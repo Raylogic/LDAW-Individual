@@ -1,10 +1,14 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 14px "Times New Roman", sans-serif;
+  background-color: rgba(80,80,80,1);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 20px;
 }
 
 ol, ul {
   padding-left: 30px;
+  color: white;
 }
 
 .board-row:after {
@@ -13,27 +17,51 @@ ol, ul {
   display: table;
 }
 
-.status {
-  margin-bottom: 10px;
-}
-
 .square {
   background: #fff;
+  background-color: #A7C8FF;
   border: 1px solid #999;
+  border-radius: 10px;
   float: left;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 90px;
+  font-family: 'Comfortaa';
+  font-weight: 700;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
+  height: 100px;
+  margin-right: 2px;
+  margin-top: 2px;
+  padding-top: 12px;
   text-align: center;
-  width: 34px;
+  width: 100px;
+  color: #3D3D3D;
+  position: relative;
+}
+.square:focus {
+  outline: thin;
+}
+.square:hover {
+  background-color: #FCFF96;
 }
 
-.square:focus {
-  outline: none;
+.jump {
+  font-size: 32px;
+  font-family: "Times New Roman", cursive;
+  background-image: linear-gradient(to right, #006133, #008345);
+  padding-right: 8px;
+  padding-left: 8px;
+  color: white;
+}
+.jump:hover {
+  border: 2px solid #609BFF;
+}
+
+.status {
+  margin-bottom: 10px;
+  margin-left: 30px;
+  color: white;
+}
+.list {
+  font-size: 40px;
 }
 
 .kbd-navigation .square:focus {
@@ -42,9 +70,10 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse wrap;
+}
+.game-info {
+  margin-left: 50px;
+  font-size: 32px;
 }
 
-.game-info {
-  margin-left: 20px;
-}
