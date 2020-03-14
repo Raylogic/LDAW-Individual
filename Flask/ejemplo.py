@@ -4,6 +4,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello there. ¡General Kenobi!"
+    return "¡I am the Senate!"
 
 app.run(host='0.0.0.0')
