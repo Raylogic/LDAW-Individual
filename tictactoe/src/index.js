@@ -22,7 +22,7 @@ class Board extends React.Component {
 
   	render() {
 	    return (
-	      	<div class="row align-items-center">
+	      	<div className="row align-items-center">
 	        	<div className="board-row">
 	          		{this.renderSquare(0)}
 	          		{this.renderSquare(1)}
@@ -90,8 +90,8 @@ class Game extends React.Component {
 				'Go to move #' + move :
 				'Restart game';
 			return (
-				<li class="list" type="circle" key={move}>
-					<button class="jump" onClick={() => this.jumpTo(move)}>{desc}</button>
+				<li className="list" type="circle" key={move}>
+					<button className="jump" onClick={() => this.jumpTo(move)}>{desc}</button>
 				</li>
 			);
 		});
@@ -112,7 +112,7 @@ class Game extends React.Component {
 			    	/>
 			    </div>
 			    <div className="game-info">
-			      <div class="status">{status}</div>
+			      <div className="status">{status}</div>
 			      <ol>{moves}</ol>
 			    </div>
 			</div>
